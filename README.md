@@ -10,5 +10,7 @@ docker build --build-arg DATABASE_URL=postgresql://dummy:dummy@localhost:5432/du
 '''bash
 ─ docker run -d -p 3000:3000 nextapp  
 '''
+## docker run commands above will take all the env variable at the root file structure.
+
 
 
