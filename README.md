@@ -13,4 +13,7 @@ docker build --build-arg DATABASE_URL=postgresql://dummy:dummy@localhost:5432/du
 ## docker run commands above will take all the env variable at the root file structure.
 
 
-
+# Read Value
+- 1. Next.js automatically loads .env files at runtime Next.js reads environment files in this order:.env.local (highest priority, ignored by git)
+.env.development or .env.production (based on NODE_ENV) ,.env
+When you run docker run -d -p 3000:3000 nextapp, Next.js looks for these files inside the container and loads them automatically.
