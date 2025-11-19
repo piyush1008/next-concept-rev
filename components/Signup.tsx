@@ -2,6 +2,7 @@
 
 import { signup } from "@/app/actions/user";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import { useState } from "react"
 
 
@@ -11,6 +12,7 @@ export default function SignupComponent(){
 
     const [username, setUsername]=useState("");
     const [password, setPassword]=useState("");
+    const router=useRouter();
 
 
     const handle=async()=>{
@@ -22,6 +24,8 @@ export default function SignupComponent(){
 
         const res=await signup(username, password);
         console.log(res);
+
+        router.push("/")
 
     }
     return(
